@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.nlahmi.garmincallcontrols" >
+
+    <uses-permission android:name="android.permission.ANSWER_PHONE_CALLS" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_CALL_LOG" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+
+<!--    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />-->
+<!--    <uses-permission android:name="android.permission.WAKE_LOCK" />-->
+<!--    android:roundIcon="@drawable/icon"-->
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme" >
+        <activity android:name=".MainActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <receiver android:name=".PhoneStateReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.PHONE_STATE" />
+            </intent-filter>
+        </receiver>
+
+<!--        <activity android:name=".FakeDialer"  android:label="test">-->
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.DIAL" />-->
+<!--                <category android:name="android.intent.category.DEFAULT" />-->
+<!--            </intent-filter>-->
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.DIAL" />-->
+<!--                <category android:name="android.intent.category.DEFAULT" />-->
+<!--                <data android:scheme="tel" />-->
+<!--            </intent-filter>-->
+<!--        </activity>-->
+
+<!--        <service android:name=".MainService" />-->
+    </application>
+
+</manifest>

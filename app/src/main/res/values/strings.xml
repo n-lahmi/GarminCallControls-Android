@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">GarminCallControls</string>
+    <string name="shared_pref_lastmsg_key">LAST_MESSAGE</string>
+    <string name="shared_pref_messages">MESSAGES</string>
+    <string name="garmin_call_controls">Garmin Call Controls</string>
+    <string name="welcome_text">Please allow the asked permissions for the app to work with your watch. After that, you can close this app (not remove/uninstall!)</string>
+</resources>
